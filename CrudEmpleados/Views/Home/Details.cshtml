@@ -1,0 +1,40 @@
+﻿@model CrudEmpleados.Models.Empleado
+
+@{
+    ViewData["Title"] = "Datos del empleado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<h1 class="text-center">Datos del Empleado</h1>
+
+<br />
+<hr />
+<div class="row">
+    <div class="col-10 offset-1">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h3 class="text-white"><strong>Crear empleado</strong></h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">@Html.DisplayFor(m => m.Foto)</li>
+                    <li class="list-group-item"><strong>Nombres: </strong>@Html.DisplayFor(m => m.Nombres)</li>
+                    <li class="list-group-item"><strong>Apellidos: </strong>@Html.DisplayFor(m => m.Apellidos)</li>
+                    <li class="list-group-item"><strong>Direccón: </strong>@Html.DisplayFor(m => m.Direccion)</li>
+                    <li class="list-group-item"><strong>Teléfono: </strong>@Html.DisplayFor(m => m.Telefono)</li>
+                    <li class="list-group-item"><strong>Email: </strong>@Html.DisplayFor(m => m.Email)</li>
+                    <li class="list-group-item"><strong>Fecha de nacimiento: </strong>@Html.DisplayFor(m => m.FechaNac)</li>
+                    <li class="list-group-item"><strong>Lugar de Naciimiento: </strong>@Html.DisplayFor(m => m.LugarNac)</li>
+                    <li class="list-group-item"><strong>Puesto Laboral: </strong>@Html.DisplayFor(m => m.Puesto)</li>
+                    <li class="list-group-item"><strong>Estado de contrato: </strong>@Html.DisplayFor(m => m.Estado)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Volver a lista</a>
+</div>
+

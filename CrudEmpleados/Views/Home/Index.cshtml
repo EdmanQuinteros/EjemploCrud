@@ -5,7 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="text-center">Usuarios</h1>
+<br />
+<h1 class="text-center">Lista de empleados</h1>
+<br />
+<hr />
 <div class="row">
     <div class="col-12">
         <div class="d-grid gap-2">
@@ -17,8 +20,8 @@
 <div class="row">
     <div class="col-12">
         <div class="card border">
-            <div class="card-header">
-                <h3><strong>Lista de Empleados</strong></h3>
+            <div class="card-header bg-dark">
+                <h3 class="text-white"><strong>Lista de Empleados</strong></h3>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -70,7 +73,7 @@
     </div>
 </div>
 
-@section Scripts{ 
+@section Scripts{
     <script>
         $(document).ready(function () {
             //llamamos a datatable
