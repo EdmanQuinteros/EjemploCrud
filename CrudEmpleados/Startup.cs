@@ -27,7 +27,8 @@ namespace CrudEmpleados
         {
             //Añadomos al servico del  DbContext nuestra conexion a db (inyecion de dependencia para usarse)//
             services.AddDbContext<ApplicationDbContext>(options => options
-            .UseSqlServer(Configuration.GetConnectionString("ConnectionSQL")));
+            .UseSqlServer(Configuration.GetConnectionString("ConnectionSQL"))
+            .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking)); //se supone para el edit 
 
             services.AddControllersWithViews();
         }

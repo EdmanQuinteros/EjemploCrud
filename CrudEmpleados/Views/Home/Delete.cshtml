@@ -21,48 +21,58 @@
                     <input type="hidden" value="Id" />  <!--este es necesario en el delete ya q pasamos los datos ocultos para saber cual borrar-->
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
+                        <label asp-for="Codigo" class="control-label"></label>
+                        <input asp-for="Codigo" class="form-control" readonly />
+                        <span asp-validation-for="Codigo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Nombres" class="control-label"></label>
-                        <input asp-for="Nombres" class="form-control" readonly/>
+                        <input asp-for="Nombres" class="form-control" readonly />
                         <span asp-validation-for="Nombres" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Apellidos" class="control-label"></label>
-                        <input asp-for="Apellidos" class="form-control" readonly/>
+                        <input asp-for="Apellidos" class="form-control" readonly />
                         <span asp-validation-for="Apellidos" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="LugarNac" class="control-label"></label>
-                        <input asp-for="LugarNac" class="form-control" readonly/>
+                        <input asp-for="LugarNac" class="form-control" readonly />
                         <span asp-validation-for="LugarNac" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="FechaNac" class="control-label"></label>
-                        <input asp-for="FechaNac" type="date" class="form-group date form-control" data-date-format="dd-mm-yyyy" readonly">
+                        <input asp-for="FechaNac" class="form-control" readonly/>
                         <span asp-validation-for="FechaNac" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Direccion" class="control-label"></label>
-                        <input asp-for="Direccion" class="form-control" readonly/>
+                        <input asp-for="Direccion" class="form-control" readonly />
                         <span asp-validation-for="Direccion" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Foto" class="control-label"></label>
-                        <input asp-for="Foto" type="file" name="archivos" id="subidaArchivo" class="form-control" readonly/>
+                        <input asp-for="Foto" type="file" name="archivos" id="subidaArchivo" class="form-control" readonly />
                         <span asp-validation-for="Foto" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Telefono" class="control-label"></label>
-                        <input asp-for="Telefono" class="form-control" type="tel" readonly/>
+                        <input asp-for="Telefono" class="form-control" readonly />
                         <span asp-validation-for="Telefono" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" type="email" readonly/>
+                        <input asp-for="Email" class="form-control" readonly />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="FechaContratacion" class="control-label"></label>
+                        <input asp-for="FechaContratacion" class="form-control" readonly />
+                        <span asp-validation-for="FechaContratacion" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Puesto" class="control-label"></label>
-                        <input asp-for="Puesto" class="form-control" readonly/>
+                        <input asp-for="Puesto" class="form-control" readonly />
                         <span asp-validation-for="Puesto" class="text-danger"></span>
                     </div>
                     <div class="form-group">

@@ -13,6 +13,12 @@
     <div class="col-12">
         <div class="d-grid gap-2">
             <a asp-action="Create" asp-controller="Home" class="btn btn-success"><i class="bi bi-plus"></i> Nuevo Empleado</a>
+            @if (TempData["mensaje"] != null)
+            {
+                <div class="alert alert-success mensaje1 " role="alert">
+                    @TempData["mensaje"]
+                </div>
+            }
         </div>
     </div>
 </div>
@@ -31,9 +37,9 @@
                             <thead>
                                 <tr>
                                     <th>@Html.DisplayNameFor(m => m.Id)</th>
+                                    <th>@Html.DisplayNameFor(m => m.Codigo)</th>
                                     <th>@Html.DisplayNameFor(m => m.Nombres)</th>
                                     <th>@Html.DisplayNameFor(m => m.Apellidos)</th>
-                                    <th>@Html.DisplayNameFor(m => m.Direccion)</th>
                                     <th>@Html.DisplayNameFor(m => m.Telefono)</th>
                                     <th>@Html.DisplayNameFor(m => m.Email)</th>
                                     <th>@Html.DisplayNameFor(m => m.Puesto)</th>
@@ -46,9 +52,9 @@
                                 <tbody>
                                     <tr>
                                         <td>@Html.DisplayFor(m => item.Id)</td>
+                                        <td>@Html.DisplayFor(m => item.Codigo)</td>
                                         <td>@Html.DisplayFor(m => item.Nombres)</td>
                                         <td>@Html.DisplayFor(m => item.Apellidos)</td>
-                                        <td>@Html.DisplayFor(m => item.Direccion)</td>
                                         <td>@Html.DisplayFor(m => item.Telefono)</td>
                                         <td>@Html.DisplayFor(m => item.Email)</td>
                                         <td>@Html.DisplayFor(m => item.Puesto)</td>
@@ -101,4 +107,15 @@
             });
         });
     </script>
+
+
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
+                $(".mensaje1").fadeOut(1500);
+            }, 2500);
+
+        });
+    </script>
+
 }

@@ -18,51 +18,61 @@
             </div>
             <div class="card-body">
                 <form asp-action="Edit" method="post" enctype="multipart/form-data">
-                    <input type="hidden" value="Id"/>  <!--este es necesario en el edit para pasar los datos ocultos-->
+                    <input type="hidden" value="Id" />  <!--este es necesario en el edit para pasar los datos ocultos-->
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
+                        <label asp-for="Codigo" class="control-label"></label>
+                        <input asp-for="Codigo" class="form-control" />
+                        <span asp-validation-for="Codigo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Nombres" class="control-label"></label>
-                        <input asp-for="Nombres" class="form-control" placeholder="Nombres"/>
+                        <input asp-for="Nombres" class="form-control" />
                         <span asp-validation-for="Nombres" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Apellidos" class="control-label"></label>
-                        <input asp-for="Apellidos" class="form-control" placeholder="Apellidos"/>
+                        <input asp-for="Apellidos" class="form-control" />
                         <span asp-validation-for="Apellidos" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="LugarNac" class="control-label"></label>
-                        <input asp-for="LugarNac" class="form-control" placeholder="Lugar de nacimiento"/>
+                        <input asp-for="LugarNac" class="form-control" />
                         <span asp-validation-for="LugarNac" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="FechaNac" class="control-label"></label>
-                        <input asp-for="FechaNac" type="date" class=" form-group date form-control" data-date-format="dd-mm-yyyy" placeholder="00-00-0000">
+                        <input asp-for="FechaNac" class=" form-control">
                         <span asp-validation-for="FechaNac" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Direccion" class="control-label"></label>
-                        <input asp-for="Direccion" class="form-control" placeholder="Dirección"/>
+                        <input asp-for="Direccion" class="form-control" placeholder="Dirección" />
                         <span asp-validation-for="Direccion" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Foto" class="control-label"></label>
-                        <input asp-for="Foto" type="file" name="archivos" id="subidaArchivo" class="form-control"/>
+                        <input asp-for="Foto" type="file" name="archivos" id="subidaArchivo" class="form-control" />
                         <span asp-validation-for="Foto" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Telefono" class="control-label"></label>
-                        <input asp-for="Telefono" class="form-control" type="tel" placeholder="0000-0000"/>
+                        <input asp-for="Telefono" class="form-control" />
                         <span asp-validation-for="Telefono" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" type="email" placeholder="empleado@ejemplo.com"/>
+                        <input asp-for="Email" class="form-control" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
+                        <label asp-for="FechaContratacion" class="control-label"></label>
+                        <input asp-for="FechaContratacion" class="form-control" />
+                        <span asp-validation-for="FechaContratacion" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
                         <label asp-for="Puesto" class="control-label"></label>
-                        <input asp-for="Puesto" class="form-control" placeholder="Puesto laboral"/>
+                        <input asp-for="Puesto" class="form-control" />
                         <span asp-validation-for="Puesto" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -80,13 +90,13 @@
                         <button type="submit" class="btn btn-primary" asp-route-id="@Model.Id"><i class="bi bi-pencil-fill"></i> Editar usuario</button>
                     </div>
                 </form>
-
             </div>
+        </div>
+        <br />
+        <div>
+            <a asp-action="Index"><i class="bi bi-arrow-return-left"></i> Volver a lista</a>
         </div>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Volver a lista</a>
-</div>
 
